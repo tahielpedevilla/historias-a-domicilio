@@ -48,17 +48,38 @@ function NavBar() {
         </Flex>
         <Stack direction={"row"} flex={{base: 1, md: 0}} justify={"flex-end"} mr={4} spacing={6}>
           <Link to="/personas">
-            <Button color={useColorModeValue("black", "white")} fontSize="md" variant="buttonNav">
+            <Button
+              _hover={{
+                color: "gray",
+              }}
+              color={useColorModeValue("black", "white")}
+              fontSize="md"
+              variant="buttonNav"
+            >
               Personas
             </Button>
           </Link>
           <Link to="/cambios">
-            <Button color={useColorModeValue("black", "white")} fontSize="md" variant="buttonNav">
+            <Button
+              _hover={{
+                color: "gray",
+              }}
+              color={useColorModeValue("black", "white")}
+              fontSize="md"
+              variant="buttonNav"
+            >
               Cambios
             </Button>
           </Link>
           <Link to="/contacto">
-            <Button color={useColorModeValue("black", "white")} fontSize="md" variant="buttonNav">
+            <Button
+              _hover={{
+                color: "gray",
+              }}
+              color={useColorModeValue("black", "white")}
+              fontSize="md"
+              variant="buttonNav"
+            >
               Contacto
             </Button>
           </Link>

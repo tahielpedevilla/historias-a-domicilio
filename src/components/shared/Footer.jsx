@@ -12,6 +12,7 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
+  ModalHeader,
   ModalCloseButton,
   ModalBody,
   FormControl,
@@ -23,9 +24,9 @@ import {FaTwitter, FaYoutube, FaInstagram} from "react-icons/fa";
 
 function Footer() {
   const fecha = new Date().getFullYear();
-  const {isOpen, onOpen, onClose} = useDisclosure();
   const initialRef = React.useRef();
   const finalRef = React.useRef();
+  const {isOpen, onOpen, onClose} = useDisclosure();
 
   return (
     <Box bg={useColorModeValue("white", "black")}>
@@ -41,7 +42,6 @@ function Footer() {
         <Text color={useColorModeValue("black", "white")} px={4}>
           © Historias a domicilio. {fecha}.
         </Text>
-
         <Stack direction={"row"} spacing={6}>
           <Button variant="buttonNav" onClick={onOpen}>
             Quiero más historias
@@ -62,14 +62,12 @@ function Footer() {
             </Link>
           </IconButton>
         </Stack>
-
-        {/* Modal */}
         <Modal finalFocusRef={finalRef} initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
-          <ModalContent bg="black" borderRadius="0">
-            {/* <ModalHeader fontStyle="italic" fontWeight="100">
+          <ModalContent bg={useColorModeValue("gray.50", "gray.800")} borderRadius="0">
+            <ModalHeader fontWeight="700" textAlign="center">
               Quiero más historias
-            </ModalHeader> */}
+            </ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>
               <FormControl>
