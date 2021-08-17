@@ -30,6 +30,18 @@ const theme = extendTheme({
             bg: "white",
           },
         },
+        buttonNav: {
+          color: "gray.100",
+          borderColor: "white",
+          fontWeight: "300",
+          textTransform: "uppercase",
+          _hover: {
+            color: "white",
+          },
+          _focus: {
+            boxShadow: "0",
+          },
+        },
       },
     },
   },

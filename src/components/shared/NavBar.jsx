@@ -1,7 +1,20 @@
 import React from "react";
-import {Box, Flex, useBreakpointValue, useColorModeValue, Text, Button, Stack} from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  useBreakpointValue,
+  useColorModeValue,
+  Text,
+  Button,
+  Stack,
+  useColorMode,
+  IconButton,
+} from "@chakra-ui/react";
+import {MoonIcon, SunIcon} from "@chakra-ui/icons";
 
 function NavBar() {
+  const {colorMode, toggleColorMode} = useColorMode();
+
   return (
     <Box>
       <Flex
@@ -33,15 +46,34 @@ function NavBar() {
           </Text>
         </Flex>
         <Stack direction={"row"} flex={{base: 1, md: 0}} justify={"flex-end"} mr={4} spacing={6}>
-          <Button as={"a"} color={useColorModeValue("black", "white")} fontSize={"md"} href={"/personas"}>
+          <Button
+            as={"a"}
+            color={useColorModeValue("black", "white")}
+            fontSize={"md"}
+            href={"/personas"}
+            variant="buttonNav"
+          >
             Personas
           </Button>
-          <Button as={"a"} color={useColorModeValue("black", "white")} fontSize={"md"} href={"/cambios"}>
+          <Button
+            as={"a"}
+            color={useColorModeValue("black", "white")}
+            fontSize={"md"}
+            href={"/cambios"}
+            variant="buttonNav"
+          >
             Cambios
           </Button>
-          <Button as={"a"} color={useColorModeValue("black", "white")} fontSize={"md"} href={"/contacto"}>
+          <Button
+            as={"a"}
+            color={useColorModeValue("black", "white")}
+            fontSize={"md"}
+            href={"/contacto"}
+            variant="buttonNav"
+          >
             Contacto
           </Button>
+          <IconButton icon={colorMode === "light" ? <SunIcon /> : <MoonIcon />} onClick={toggleColorMode} />
         </Stack>
       </Flex>
     </Box>
