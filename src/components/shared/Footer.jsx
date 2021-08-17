@@ -12,7 +12,6 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalCloseButton,
   ModalBody,
   FormControl,
@@ -44,7 +43,9 @@ function Footer() {
         </Text>
 
         <Stack direction={"row"} spacing={6}>
-          <Button onClick={onOpen}>Quiero más historias</Button>
+          <Button variant="buttonNav" onClick={onOpen}>
+            Quiero más historias
+          </Button>
           <Link isExternal href="https://twitter.com/leocarriazo">
             <IconButton>
               <FaTwitter />
@@ -65,26 +66,24 @@ function Footer() {
         {/* Modal */}
         <Modal finalFocusRef={finalRef} initialFocusRef={initialRef} isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Quiero más historias</ModalHeader>
+          <ModalContent bg="black" borderRadius="0">
+            {/* <ModalHeader fontStyle="italic" fontWeight="100">
+              Quiero más historias
+            </ModalHeader> */}
             <ModalCloseButton />
             <ModalBody pb={6}>
               <FormControl>
-                <FormLabel>Nombre</FormLabel>
-                <Input ref={initialRef} placeholder="Nombre" />
-              </FormControl>
-
-              <FormControl mt={4}>
                 <FormLabel>Email</FormLabel>
-                <Input placeholder="Email" />
+                <Input ref={initialRef} _focus={{boxShadow: "0"}} borderRadius="0" placeholder="Email" />
               </FormControl>
             </ModalBody>
-
             <ModalFooter>
-              <Button colorScheme="gray" mr={3}>
+              <Button mr={3} variant="outline">
                 Suscribirme
               </Button>
-              <Button onClick={onClose}>Volver</Button>
+              <Button variant="outline" onClick={onClose}>
+                Volver
+              </Button>
             </ModalFooter>
           </ModalContent>
         </Modal>

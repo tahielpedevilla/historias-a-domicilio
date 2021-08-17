@@ -1,4 +1,5 @@
 import {extendTheme} from "@chakra-ui/react";
+import {useColorModeValue} from "@chakra-ui/color-mode";
 
 const theme = extendTheme({
   colors: {
@@ -31,12 +32,13 @@ const theme = extendTheme({
           },
         },
         buttonNav: {
-          color: "gray.100",
+          color: "white",
+          textColor: "gray",
           borderColor: "white",
           fontWeight: "300",
-          textTransform: "uppercase",
           _hover: {
             color: "white",
+            textColor: "white",
           },
           _focus: {
             boxShadow: "0",
