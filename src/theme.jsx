@@ -14,9 +14,8 @@ const theme = extendTheme({
   components: {
     Button: {
       baseStyle: {
-        fontWeight: "bold", // Normally, it is "semibold"
+        fontWeight: "bold",
       },
-      // We can add a new visual variant
       variants: {
         outline: {
           color: "white",
@@ -30,9 +29,13 @@ const theme = extendTheme({
             bg: "white",
           },
         },
+
         buttonNav: {
           border: "0",
           fontWeight: "300",
+          _hover: {
+            color: "gray",
+          },
           _focus: {
             boxShadow: "0",
           },

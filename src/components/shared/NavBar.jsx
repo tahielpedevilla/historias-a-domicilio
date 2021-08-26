@@ -17,7 +17,7 @@ function NavBar() {
   const {colorMode, toggleColorMode} = useColorMode();
 
   return (
-    <Box>
+    <Box boxShadow="xl">
       <Flex
         align={"center"}
         bg={useColorModeValue("white", "black")}
@@ -72,14 +72,7 @@ function NavBar() {
             </Button>
           </Link>
           <Link to="/contacto">
-            <Button
-              _hover={{
-                color: "gray",
-              }}
-              color={useColorModeValue("black", "white")}
-              fontSize="md"
-              variant="buttonNav"
-            >
+            <Button color={useColorModeValue("black", "white")} fontSize="md" variant="buttonNav">
               Contacto
             </Button>
           </Link>

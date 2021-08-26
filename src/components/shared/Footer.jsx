@@ -66,7 +66,7 @@ function Footer() {
           <ModalOverlay />
           <ModalContent bg={useColorModeValue("gray.50", "gray.800")} borderRadius="0">
             <ModalHeader fontWeight="700" textAlign="center">
-              Quiero más historias
+              ¡Quiero más historias!
             </ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>
@@ -76,11 +76,8 @@ function Footer() {
               </FormControl>
             </ModalBody>
             <ModalFooter>
-              <Button mr={3} variant="outline">
+              <Button mr={3} variant="solid">
                 Suscribirme
-              </Button>
-              <Button variant="outline" onClick={onClose}>
-                Volver
               </Button>
             </ModalFooter>
           </ModalContent>
